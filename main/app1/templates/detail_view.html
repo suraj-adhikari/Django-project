@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <div class="main">
+            {{ dataobj.name }}<br/>
+            {{ dataobj.joining_date }}<br/>
+            {{ dataobj.department }}<br/>
+            {% for place in dataobj.project.all %}{{ place }}<br/>{% endfor %}
+            {{ dataobj.project.all|join:", " }}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+     <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    </head>
+<body>
+    <h2>Welcom to Django!!!</h2>
+    <h3>I am :{{name}}</h3>
+    <form action =""  method ="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+    <input type= "submit" value="Submit">
+    </form>
+    
+</body>
+</html>
+ -->
+
+
+ {% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% block body-content %}
+<div class="container">
+    <h2>Welcome to Django!!!</h2>
+    <h3>Hi, I am : {{ name }}</h3>
+    <div class="row">
+        <div class="col-md-6">
+        <form method="POST" role="form" class="form-group" >  
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% bootstrap_button "Submit" button_type="submit" button_class="btn-primary" %}
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

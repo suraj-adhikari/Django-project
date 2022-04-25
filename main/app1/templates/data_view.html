@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <div class="main">
+            {% for value in dataset %}.
+            {{ value.name }}<br/>
+            {{ value.joining_date }}<br/>
+            {{ value.department }}<br/>
+            {{ value.project }}<br/>
+            {{ value.project.all|join:", " }}<br/>
+            <hr/>
+            {% endfor %}
+        </div>
+    </body>
+</html>
